@@ -1,15 +1,15 @@
-# StorageDB
+# LSMongo
 
-[![npm](https://badge.fury.io/js/storagedb2.svg)](https://www.npmjs.com/package/storagedb2)
-[![license](https://img.shields.io/npm/l/storagedb2.svg)](https://github.com/instapp/storagedb)
+[![npm](https://badge.fury.io/js/lsmongo.svg)](https://www.npmjs.com/package/lsmongo)
+[![license](https://img.shields.io/npm/l/lsmongo.svg)](https://github.com/elitonfreitas/lsmongo)
 
-MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)
+LSMongo is a Mongo like API for HTML5 Storage (localStorage and sessionStorage)
 
 > ***NOTICE***: The npm package name is '**storagedb2**'
 
 ## Features
 
-- MongoDB-like API
+- LSMongoDB API
 - Lightweight, only ***3KB*** (minified and gzipped)
 - No dependencies
 - Easy configuration
@@ -21,17 +21,17 @@ MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)
 ### Install
 
 ```bash
-npm install --save storagedb2
+npm install --save lsmongo
 ```
 
 Import storagedb to your project (ES6)
 ```js
-import StorageDB from 'storagedb2'
+import StorageDB from 'lsmongo'
 ```
 
 Or add the script to your main HTML file
 ```html
-<script src="./lib/storagedb.js"></script>
+<script src="./lib/lsmongo.js"></script>
 ```
 
 ### Collection Supported methods
