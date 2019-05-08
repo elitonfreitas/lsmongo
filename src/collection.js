@@ -288,7 +288,7 @@ class Collection {
 		}
 
 		if (!opts.multi) {
-			let id = ids
+			let id = this.path + ids[pk];
 			let row = cacheable ? this.cache[id] : JSON.parse(this.storage.getItem(id))
 			let isIdUpdated = values[pk] && values[pk] !== row[pk]
 			let newId = isIdUpdated ? this.path + values[pk] : id
