@@ -1,27 +1,24 @@
-const webpack = require('webpack')
+const UglifyJsPlugin = require('uglify-es-webpack-plugin')
 
 module.exports = {
-  entry: './index.js',
-  output: {
-    path: __dirname + '/lib',
-    filename: 'lsmongo.js'
-  },
+  entry: './index.ts',
   module: {
     rules: [{
-      test: /\.js?$/,
-      use: {
-        loader: 'babel-loader'
-      }
+      test: /\.tsx?$/,
+      use: 'ts-loader',
+      exclude: /node_modules/
     }]
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false,
-      mangle: {
-        except: ['StorageDB', 'Collection']
-      }
-    }),
-    new webpack.BannerPlugin('Created by Eliton Freitas based in Acathur StorageDB lib.\n(c) 2017 Instapp.\n\nhttps://github.com/elitonfreitas/lsmongo\nReleased under the MIT License.')
-  ],
-  devtool: false
-}
+  resolve: {
+    extensions: ['.tsx', '.ts']
+  },
+  output: {
+    filename: 'lsmongo.min.js',
+    path: __dirname + '/dist'
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin()
+    ]
+  }
+};

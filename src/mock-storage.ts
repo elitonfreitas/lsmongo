@@ -1,4 +1,6 @@
 class MockStorage {
+  length: any;
+  
   constructor() {
     this.length = 0
   }

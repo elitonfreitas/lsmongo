@@ -1,4 +1,4 @@
-const compare = (sort, a, b, i, fields) => {
+const compare = (sort, a, b, i?, fields?) => {
   i = i || 0
   fields = fields || Object.keys(sort)
 

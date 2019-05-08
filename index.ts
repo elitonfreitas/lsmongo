@@ -2,15 +2,20 @@ import isSupported from './src/utils/is-supported'
 import Collection from './src/collection'
 import ID from './src/id'
 
-class StorageDB {
-  constructor(opts) {
+export class LSMongo {
+  storage: any;
+  database: any;
+  primaryKey: any;
+  sep: any;
+  ID: any;
+  constructor(opts: any) {
     opts = opts || {}
 
     this.storage = opts.storage || window && window.localStorage
     this.database = opts.database || 'db'
     this.primaryKey = opts.primaryKey || '_id'
-	this.sep = opts.sep || ':'
-	this.ID = opts.ID || ID;
+    this.sep = opts.sep || ':'
+    this.ID = opts.ID || ID;
 
     if (!isSupported(this.storage)) {
       this.storage = null
@@ -27,7 +32,5 @@ class StorageDB {
 }
 
 if (window) {
-  window.StorageDB = StorageDB
+  (<any>window).LSMongo = LSMongo
 }
-
-export default StorageDB

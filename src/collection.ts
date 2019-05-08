@@ -4,6 +4,14 @@ import queryMatch from './utils/query-match'
 import sortCompare from './utils/sort-compare'
 
 class Collection {
+	name: any;
+	storage: any;
+	path: any;
+	primaryKey: any;
+	ID: any;
+	cache: any;
+	cacheable: any;
+
 	constructor (db, name, opts) {
 		opts = opts || {}
 
@@ -49,7 +57,7 @@ class Collection {
 		} else if (typeof filter === 'function') {
 			isFnFilter = true
 		} else if (!filter) {
-			let ret = isTypeId ? Object.keys(this.cache) : Object.values(this.cache)
+			let ret = isTypeId ? Object.keys(this.cache) : Object.keys(this.cache).map(k => this.cache[k]);
 
 			if (opts.multi) {
 				return ret
@@ -178,7 +186,7 @@ class Collection {
 	}
 
 
-	findOne (query, opts) {
+	findOne (query, opts?) {
 		query = query || {}
 		opts = opts || {}
 
@@ -192,7 +200,7 @@ class Collection {
 			multi: false
 		}
 
-		if (queryFields.length && queryFields.includes(this.primaryKey)) {
+		if (queryFields.length && queryFields.indexOf(this.primaryKey) > -1) {
 			id = query[this.primaryKey]
 			quickTarget = true
 		}
@@ -231,7 +239,7 @@ class Collection {
 	}
 
 
-	remove (query, opts) {
+	remove (query, opts?) {
 		if (!query) {
 			throw new Error('remove needs a query')
 		}

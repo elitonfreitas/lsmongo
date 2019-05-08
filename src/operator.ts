@@ -34,7 +34,7 @@ class Operator {
 
   static $in(val, tar) {
     if (!(val instanceof Array)) throw new Error('\'$in\' value must be an array')
-    return val.includes(tar)
+    return val.indexOf(tar) > -1
   }
 
   static $lt(val, tar) {
@@ -53,11 +53,11 @@ class Operator {
 
   static $nin(val, tar) {
     if (!(val instanceof Array)) throw new Error('\'$nin\' value must be an array')
-    return !val.includes(tar)
+    return val.indexOf(tar) === -1
   }
 
   static _checkExist(op) {
-    if (ops.includes(op)) {
+    if (ops.indexOf(op) > -1) {
       return true
     }
     throw new Error('unknown operator: \'' + op + '\'')
