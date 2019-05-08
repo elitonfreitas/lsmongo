@@ -1,5 +1,5 @@
 {
-  "name": "storagedb2",
+  "name": "locallikemongo",
   "version": "1.0.5",
   "description": "MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)",
   "main": "lib/storagedb.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/instapp/storagedb.git"
+    "url": "git+https://github.com/elitonfreitas/storagedb.git"
   },
   "keywords": [
     "storagedb",
@@ -21,9 +21,9 @@
   "author": "Acathur",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/instapp/storagedb/issues"
+    "url": "https://github.com/elitonfreitas/storagedb/issues"
   },
-  "homepage": "https://github.com/instapp/storagedb#readme",
+  "homepage": "https://github.com/elitonfreitas/storagedb#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
