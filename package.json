@@ -1,6 +1,6 @@
 {
   "name": "lsmongo",
-  "version": "1.0.10",
+  "version": "1.1.1",
   "description": "LSMongo is a Mongo like API for HTML5 Storage (localStorage and sessionStorage)",
   "main": "lib/index.js",
   "scripts": {
