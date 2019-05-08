@@ -1,6 +1,6 @@
 {
   "name": "locallikemongo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)",
   "main": "lib/storagedb.js",
   "scripts": {
