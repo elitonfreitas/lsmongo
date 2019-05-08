@@ -1,15 +1,15 @@
 {
-  "name": "locallikemongo",
-  "version": "1.0.6",
-  "description": "MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)",
-  "main": "lib/storagedb.js",
+  "name": "lsmongo",
+  "version": "1.0.0",
+  "description": "LSMongo is a Mongo like API for HTML5 Storage (localStorage and sessionStorage)",
+  "main": "lib/lsmongo.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elitonfreitas/storagedb.git"
+    "url": "git+https://github.com/elitonfreitas/lsmongo.git"
   },
   "keywords": [
     "storagedb",
@@ -21,9 +21,9 @@
   "author": "Acathur",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/elitonfreitas/storagedb/issues"
+    "url": "https://github.com/elitonfreitas/lsmongo/issues"
   },
-  "homepage": "https://github.com/elitonfreitas/storagedb#readme",
+  "homepage": "https://github.com/elitonfreitas/lsmongo#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",

@@ -1,4 +1,3 @@
-import ID from './id'
 import MockStorage from './mock-storage'
 import isObject from './utils/is-object'
 import queryMatch from './utils/query-match'
@@ -12,6 +11,7 @@ class Collection {
 		this.storage = db.storage || new MockStorage()
 		this.path = db.database + db.sep + name + db.sep
 		this.primaryKey = opts.primaryKey || db.primaryKey
+		this.ID = opts.ID;
 		this.cache = {}
 		this.cacheable = !db.storage
 	}
@@ -108,7 +108,7 @@ class Collection {
 			}
 
 			if (typeof row[pk] === 'undefined') {
-				row[pk] = new ID().toString()
+				row[pk] = new this.ID().toString()
 			}
 
 			if (cacheable) {

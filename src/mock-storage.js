@@ -1,12 +1,12 @@
 class MockStorage {
-	constructor () {
-		this.length = 0
-	}
+  constructor() {
+    this.length = 0
+  }
 
-	key() {}
-	setItem() {}
-	getItem() {}
-	removeItem() {}
+  key() {}
+  setItem() {}
+  getItem() {}
+  removeItem() {}
 }
 
 export default MockStorage
